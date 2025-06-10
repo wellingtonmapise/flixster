@@ -2,7 +2,22 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     flex-wrap: wrap;
 }
 
+h2{
+   color: aliceblue;
+   font-weight: bold;
+   font-size: 2rem;
+}
+
+
+.nav{
+    display: flex;
+    background-color: #282c34
+}
+
+.movie-list p{
+    color: white;
+}
