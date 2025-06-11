@@ -3,11 +3,11 @@
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.5);
     width: 230px;
-    /* height: 60vh; */
     margin-top: 2rem;
     text-align: center;  
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .movie-card p, h3{
@@ -17,4 +17,7 @@
 .movie-card img{
     width: 100%;
     border-radius: 5px;
+    height: 230px; 
+    height: 345px; 
+
 }

@@ -112,10 +112,10 @@ const MovieList = () => {
 
     return (
         <main>
+            <div className="header-section">
+                <Header/>
+            </div>
             <div className="nav">
-                <div className="nav-top">
-                    <Header />
-                </div>
                 <div className="nav-bottom">
                     <div className="search-section">
                         <SearchBar onSearch={handleSearch} />
@@ -129,9 +129,9 @@ const MovieList = () => {
                         >
                             Clear
                         </button>
-                    </div>
-                    <Sort onSort={handleSort} />
+                    </div> 
                 </div>
+                <Sort onSort={handleSort} /> 
             </div>
             <h2>
                 {mode === "search" ? `Results for: ${searchQuery}` : "Now Playing"}

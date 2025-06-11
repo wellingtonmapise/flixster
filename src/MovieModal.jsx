@@ -6,7 +6,7 @@ const MovieModal = ({ movie, onClose }) => {
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
                 <h2>{movie.title}</h2>
                 <img
-                    src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`}
+                    src={movie.backdrop_path ? `https://image.tmdb.org/t/p/w500${movie.backdrop_path}` : `src/assets/placeholder.png` }
                     alt={movie.title}
                 />
                 <p>Runtime: {movie.runtime} minutes</p>

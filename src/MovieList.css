@@ -27,15 +27,23 @@ h2{
 
 .nav-bottom{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-even;
     gap: 1rem;
     width: 100%;
     max-width: 900px;
     flex-wrap: wrap;
 }
+
+.header-section{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    color: white;
+}
+
+
 .search-section{
     display: flex;
-    gap: 0.5rem;
     flex: 1;
 }
 .search-section input{

@@ -10,7 +10,7 @@ Deployed Application (**required**): https://flixster-final-srzb.onrender.com
 
 #### REQUIRED FEATURES
 
-- [ ] **Display Movies**
+- [x] **Display Movies**
   - [x] Users can view a list of current movies from The Movie Database API in a grid view.
     - [x] Movie tiles should be reasonably sized (at least 6 playlists on your laptop when full screen; large enough that the playlist components detailed in the next feature are legible).
   - [x] For each movie displayed, users can see the movie's:

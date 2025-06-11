@@ -3,3 +3,9 @@ h1{
     font-weight: bold;
     text-align: center;
 }
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
