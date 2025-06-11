@@ -1,16 +1,15 @@
 import { useState } from 'react'
 import './App.css'
 import MovieList from './MovieList'
-import Nav from './Nav'
+import Footer from './Footer'
 
 
 const App = () => {
-  //const [movies, setMovies] = useState([]);
   return (
     <div className="App">
-      <MovieList/> {/* pass Movilist.... */}
+      <MovieList/> 
+      <Footer/>
     </div>
   )
 }
-
 export default App

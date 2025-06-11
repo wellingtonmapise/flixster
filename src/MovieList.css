@@ -15,9 +15,46 @@ h2{
 
 .nav{
     display: flex;
-    background-color: #282c34
+    background-color: #282c34;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    justify-content: space-between;
+    color:white;
+    gap: 1rem
+
 }
 
-.movie-list p{
-    color: white;
+.nav-bottom{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    width: 100%;
+    max-width: 900px;
+    flex-wrap: wrap;
+}
+.search-section{
+    display: flex;
+    gap: 0.5rem;
+    flex: 1;
+}
+.search-section input{
+    flex: 1;
+    padding: 0.5rem;
+    border: 4px;
+    border: 1px solid #ccc;
+}
+
+button{
+    color:white;
+    padding: 0.5rem 1rem;
+
+}
+
+button:hover{
+    background-color: #666;
+}
+
+.load-more-btn{
+    margin-top: 20px;
 }
