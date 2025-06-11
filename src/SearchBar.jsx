@@ -6,8 +6,8 @@ function SearchBar({onSearch}) {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-    console.log("search click")
     onSearch(searchQuery);
+    setSearchQuery('');
 }
 
 

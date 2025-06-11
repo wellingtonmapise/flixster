@@ -2,6 +2,8 @@ import MovieCard from './MovieCard';
 import { useEffect,useState } from 'react';
 import './MovieList.css';
 import SearchBar from './SearchBar';
+import Sort from './Sort';
+import MovieModal from './MovieModal';
 
 const MovieList = () => {
     const [error, setError] = useState(null);
@@ -11,6 +13,8 @@ const MovieList = () => {
     const [movies, setMovies] = useState([]);
     const [searchQuery, setSearchQuery] = useState('');
     const [mode,setMode] = useState("NowPlaying");
+    //modal state
+    const [selectedMovie, setSelectedMovie] = useState(null);
 
 
   const fetchMovies = async (pageNumber) => {
@@ -77,9 +81,42 @@ const searchMovies = async (query) => {
   const handleSearch = (query) => {
     setSearchQuery(query);
     setMode("search");
-    searchMovies(query);
     setMovies([]);
+    searchMovies(query);
+    
   };
+
+  const handleCardClick = async (movieId) => {
+    const apiKey = import.meta.env.VITE_APP_API_KEY;
+    const res = await fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`);
+    const data = await res.json();
+    setSelectedMovie(data);
+
+  };
+
+  const handleSort = (value) => {
+    // console.log(movies);
+    const uniqueMovies = Array.from(new Map(movies.map(movie => [movie.id,movie])).values());
+    const sortedMovies = [...uniqueMovies];
+    //console.log(sortedMovies);
+
+    if (value === "title"){
+        console.log(sortedMovies);
+        sortedMovies.sort((a,b) => a.title.localeCompare(b.title));
+    }
+    else if (value === "vote_average"){
+        sortedMovies.sort((a,b) => b.vote_average - a.vote_average);
+
+    }
+
+    else if (value == "release_date"){
+        sortedMovies.sort((a,b) => new Date(b.release_date) - new Date(a.release_date) );
+    }
+
+    setMovies(sortedMovies);
+
+  };
+
 
   return (
     <main>
@@ -90,10 +127,11 @@ const searchMovies = async (query) => {
                 setMovies([]);
                 setPage(1);
                 fetchMovies(1);
-            }}> Now Playing
+            }}>Clear
             </button>
         </div>
         <SearchBar onSearch={handleSearch}/>
+        <Sort onSort={handleSort}/>
         </div>
         <h2>{(mode === "search") ? `Results for: ${searchQuery}`: "Now Playing"}</h2>
         <div className="movie-list">
@@ -106,6 +144,7 @@ const searchMovies = async (query) => {
                 title={movie.title}
                 posterUrl={movie.poster_path}
                 voteAverage={movie.vote_average}
+                onClick={() => handleCardClick(movie.id)}
             />
             ))
         )}
@@ -115,6 +154,10 @@ const searchMovies = async (query) => {
 
         ) : (
             <p>Sorry no more movies to show</p>
+        )}
+
+        {selectedMovie && (
+            <MovieModal movie={selectedMovie} onClose={() => setSelectedMovie(null)}/>
         )}
         
     </main>

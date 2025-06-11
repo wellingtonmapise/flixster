@@ -1,0 +1,27 @@
+import './MovieModal.css'
+
+
+const MovieModal = ({movie,onClose}) => {
+return (
+    <div className="modal-overlay" onClick={onClose}>
+        <div className='modal-content' onClick={(e) => e.stopPropagation()}>
+            <h2>{movie.title}</h2>
+            <img src={`https://image.tmdb.org/t/p/w500${movie.backdrop_path}`} alt={movie.title}/>
+            <p>Runtime: {movie.runtime} minutes</p>
+            <p><strong>Realease Date: </strong>{movie.release_date}</p>
+            <p><strong>Overview : </strong>{movie.overview}</p>
+            <p><strong>Genres : </strong>{movie.genres?.map(g => g.name).join(",")}</p>
+            <p><strong>Rating: </strong>{movie.vote_average}</p>
+            <button onClick={onClose}>
+                Close
+            </button>
+
+
+        </div>
+
+        
+    </div>
+)
+}
+
+export default MovieModal;
