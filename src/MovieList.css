@@ -15,13 +15,13 @@ h2{
 
 .nav{
     display: flex;
-    background-color: #282c34;
+    background-color: #0e0f10;
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem 2rem;
     justify-content: space-between;
     color:white;
-    gap: 1rem
+    gap: 1rem;
 
 }
 
@@ -39,6 +39,7 @@ h2{
     align-items: center;
     justify-content:center;
     color: white;
+    background-color: #0e0f10;
 }
 
 
@@ -65,4 +66,8 @@ button:hover{
 
 .load-more-btn{
     margin-top: 20px;
+}
+
+.main-section{
+    background-color: #161617;
 }

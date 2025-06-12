@@ -113,7 +113,7 @@ const MovieList = () => {
     };
 
     return (
-        <main>
+        <main className="main-section">
             <div className="header-section">
                 <Header/>
             </div>
