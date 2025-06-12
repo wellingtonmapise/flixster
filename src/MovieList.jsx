@@ -84,12 +84,14 @@ const MovieList = () => {
 
     const handleCardClick = async (movieId) => {
         const apiKey = import.meta.env.VITE_APP_API_KEY;
-        const res = await fetch(
-            `https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`
-        );
-        const data = await res.json();
-        setSelectedMovie(data);
+        const [movieRes,videoRes] = await Promise.all([fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`), fetch(
+            `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}`)])
+        const movieData = await movieRes.json();
+        const videoData = await videoRes.json();
+        const trailer = videoData?.results?.find(v => v.type === "Trailer" && v.site === "YouTube");  
+        setSelectedMovie({...movieData,trailerKey : trailer ? trailer.key : null});
     };
+
 
     const handleSort = (value) => {
         const uniqueMovies = Array.from(

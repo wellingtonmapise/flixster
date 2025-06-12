@@ -18,4 +18,3 @@ const Sort = ({onSort}) => {
 }
 
 export default Sort;
- 

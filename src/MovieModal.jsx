@@ -1,4 +1,5 @@
 import "./MovieModal.css";
+import MovieTrailer from './MovieTrailer'
 
 const MovieModal = ({ movie, onClose }) => {
     return (
@@ -26,7 +27,8 @@ const MovieModal = ({ movie, onClose }) => {
                     <strong>Rating: </strong>
                     {movie.vote_average}
                 </p>
-                <button onClick={onClose}>Close</button>
+                <MovieTrailer movie={movie}/>
+                <button id="close-btn" onClick={onClose}>Close</button>
             </div>
         </div>
     );
