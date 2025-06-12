@@ -15,7 +15,7 @@ h2{
 
 .nav{
     display: flex;
-    background-color: #0e0f10;
+    background-color: #000000;
     align-items: center;
     flex-wrap: wrap;
     padding: 1rem 2rem;
@@ -39,7 +39,7 @@ h2{
     align-items: center;
     justify-content:center;
     color: white;
-    background-color: #0e0f10;
+    background-color: #000000;
 }
 
 
@@ -69,5 +69,9 @@ button:hover{
 }
 
 .main-section{
-    background-color: #161617;
+  flex:1;
+  margin-left: 220px;
+  padding: 2rem;
+  background-color: #111;
+  min-height: 100vh;
 }

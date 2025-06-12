@@ -5,9 +5,9 @@
     width: 230px;
     margin-top: 2rem;
     text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* flex-wrap: wrap; */
     cursor: pointer;
 }
 
@@ -19,7 +19,7 @@ h3 {
 .movie-card img {
     width: 100%;
     border-radius: 5px;
-    height: 230px;
+    /* height: 230px; */
     height: 345px;
 
 }
@@ -27,6 +27,7 @@ h3 {
 .movie-card:hover {
     transform: scale(1.05) translateY(-5px);
     transition: transform 0.2s ease-out;
+    border-color: white;
 }
 
 .toggle-like{
