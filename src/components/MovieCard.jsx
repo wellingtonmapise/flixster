@@ -1,7 +1,7 @@
 import './MovieCard.css';
 import { FaHeart, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { useEffect, useState } from 'react';
-import { favoritesUtils, watchedUtils } from './utils/utils';
+import { favoritesUtils, watchedUtils } from '../utils/utils';
 
 const MovieCard = ({
   id,

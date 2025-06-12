@@ -2,7 +2,9 @@ const MovieTrailer = ({ movie }) => {
     const noMovieTrailerFound = () =>{
         return(
             <>
-                <p>no movie trailer found!</p>
+                <p className="animated-msg"><strong>No movie trailer found!</strong></p> 
+                <img  src='src/assets/placeholder.png'>
+                </img>
             </>
 
         )

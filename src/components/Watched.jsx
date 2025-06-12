@@ -1,4 +1,4 @@
-import { watchedUtils } from './utils/utils';
+import { watchedUtils } from '../utils/utils';
 import { useState,useEffect } from 'react';
 import MovieCard from './MovieCard';
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import MovieCard from './MovieCard';
-import { favoritesUtils} from './utils/utils';
+import { favoritesUtils} from '../utils/utils';
 import './Favorite.css'
 
 function Favorites() {
