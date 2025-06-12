@@ -69,15 +69,14 @@ button:hover{
 }
 
 .main-section{
-  flex:1;
-  margin-left: 220px;
-  padding: 2rem;
-  background-color: #111;
-  min-height: 100vh;
+    color:white;
+    background-color: #0e0f10;
+    /* width:900px;  */
+    max-width: 100%;
 }
+
 
 .clear-btn{  
   color: white;
   border:  0.1px solid white;
-
 }

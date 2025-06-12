@@ -4,7 +4,7 @@ Submitted by: **Wellington Mapise**
 
 Estimated time spent: **#** hours spent in total
 
-Deployed Application (**required**): https://flixster-final-srzb.onrender.com
+Deployed Application (**required**):[Flixster Deployed Site](https://flixster-final-srzb.onrender.com)
 
 ### Application Features
 
@@ -33,7 +33,7 @@ Deployed Application (**required**): https://flixster-final-srzb.onrender.com
   - [x] Website implements all of the following accessibility features:
     - [x] Semantic HTML
     - [x] [Color contrast](https://webaim.org/resources/contrastchecker/)
-    - [ ] Alt text for images 
+    - [x] Alt text for images 
   - [x] Website implements responsive web design.
     - [x] Uses CSS Flexbox or CSS Grid
     - [x] Movie tiles and images shrink/grow in response to window size
@@ -48,7 +48,7 @@ Deployed Application (**required**): https://flixster-final-srzb.onrender.com
       - [x] Genres
       - [x] An overview
   - [x] Users can use a drop-down menu to sort movies.
-    - [ ] Drop-down allows movies to be sorted by:
+    - [x] Drop-down allows movies to be sorted by:
       - [x] Title (alphabetic, A-Z)
       - [x] Release date (chronologically, most recent to oldest)
       - [x] Vote average (descending, highest to lowest)
@@ -79,7 +79,7 @@ Deployed Application (**required**): https://flixster-final-srzb.onrender.com
   - [x] If the movie is already favorited:
     - [x] Clicking on the visual element should mark the movie as *not* favorited.
     - [x] There should be visual feedback (such as the heart turning a different color) to show that the movie has been unfavorited. 
-- [ ] **Watched Checkbox**
+- [x] **Watched Checkbox**
   - [x] For each movie displayed, users can mark the movie as watched.
   - [x] There should be visual element (such as an eye icon) on each movie's tile to show whether or not the movie has been watched.
   - [x] If the movie has not been watched:
@@ -88,15 +88,15 @@ Deployed Application (**required**): https://flixster-final-srzb.onrender.com
   - [x] If the movie is already watched:
     - [x] Clicking on the visual element should mark the movie as *not* watched.
     - [x] There should be visual feedback (such as the eye turning a different color) to show that the movie has not been watched.
-- [ ] **Sidebar**
-  - [ ] The website includes a side navigation bar.
-  - [ ] The sidebar has three pages:
-    - [ ] Home
-    - [ ] Favorites
-    - [ ] Watched
-  - [ ] The Home page displays all current movies in a grid view, the search bar, and the sort movies drop-down.
-  - [ ] The Favorites page displays all favorited movies in a grid view.
-  - [ ] The Watched page displays all watched movies in a grid view.
+- [x] **Sidebar**
+  - [x] The website includes a side navigation bar.
+  - [x] The sidebar has three pages:
+    - [x] Home
+    - [x] Favorites
+    - [x] Watched
+  - [x] The Home page displays all current movies in a grid view, the search bar, and the sort movies drop-down.
+  - [x] The Favorites page displays all favorited movies in a grid view.
+  - [x] The Watched page displays all watched movies in a grid view.
 
 ### Walkthrough Video
 
@@ -120,8 +120,10 @@ Add your response here
 
 ### Open-source libraries used
 
-- Add any links to open-source libraries used in your project.
+- n/a
 
 ### Shout out
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
+Shoutout to all the tech fellows, the instructors and cohort 2!
+
