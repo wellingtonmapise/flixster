@@ -1,0 +1,12 @@
+.header-top{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    position: fixed;
+}
+
+.header-top h1{
+    text-align: center;
+    color: white;
+    font-size: 50px;
+}

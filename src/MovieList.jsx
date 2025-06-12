@@ -82,7 +82,7 @@ const MovieList = () => {
         searchMovies(query);
     };
 
-    const handleCardClick = async (movieId) => {
+   const handleCardClick = async (movieId) => {
         const apiKey = import.meta.env.VITE_APP_API_KEY;
         const [movieRes,videoRes] = await Promise.all([fetch(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}`), fetch(
             `https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=${apiKey}`)])
@@ -93,7 +93,7 @@ const MovieList = () => {
     };
 
 
-    const handleSort = (value) => {
+const handleSort = (value) => {
         const uniqueMovies = Array.from(
             new Map(movies.map((movie) => [movie.id, movie])).values()
         );
@@ -121,7 +121,7 @@ const MovieList = () => {
                 <div className="nav-bottom">
                     <div className="search-section">
                         <SearchBar onSearch={handleSearch} />
-                        <button
+                        <button className="clear-btn"
                             onClick={() => {
                                 setMode("NowPlaying");
                                 setMovies([]);
@@ -145,10 +145,12 @@ const MovieList = () => {
                     movies.map((movie, index) => (
                         <MovieCard
                             key={`${movie.id}-${index}`}
+                            id ={movie.id}
                             title={movie.title}
                             posterUrl={movie.poster_path}
                             voteAverage={movie.vote_average}
                             onClick={() => handleCardClick(movie.id)}
+
                         />
                     ))
                 )}

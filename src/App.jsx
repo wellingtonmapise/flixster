@@ -12,8 +12,8 @@ const App = () => {
   return (
     <Router>
       <div className="app">
-      <div className='main-page'>
         <SideBar/> 
+      <div className='main-page'>
         <Routes>
           <Route path="/" element={<MovieList/> }/>
           <Route  path="/favorites" element={<Favorites/> }/>

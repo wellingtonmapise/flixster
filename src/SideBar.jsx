@@ -6,15 +6,16 @@ import './SideBar.css';
 
 const SideBar = () => {
   const [sideBar, setSideBar] = useState(false);
-  //location?
   const location = useLocation();
   const showSidebar = () => setSideBar(!sideBar);
 
   return (
-    <div className='side-bar'>
-      <button className="menu-section" onClick={showSidebar}>
+    <>
+<button className="menu-btn" onClick={showSidebar}>
         <FaIcons.FaBars />
       </button>
+   
+    <div className='side-bar'>
       <nav className={sideBar ? 'nav-menu active' : 'nav-menu'}>
         <ul className='nav-menu-items'>
           <li className='navbar-toggle'>
@@ -41,6 +42,7 @@ const SideBar = () => {
         </ul>
       </nav>
     </div>
+     </>
   );
 };
 

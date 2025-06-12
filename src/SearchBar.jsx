@@ -22,7 +22,7 @@ function SearchBar({ onSearch }) {
                 onChange={handleSearchChange}
                 placeholder="Search for movies"
             />
-            <button type="submit" className="search-button">
+            <button type="submit" className="search-btn">
                 Search
             </button>
         </form>

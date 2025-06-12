@@ -1,5 +1,3 @@
-import "./MovieModal.css";
-
 const MovieTrailer = ({ movie }) => {
     const noMovieTrailerFound = () =>{
         return(
