@@ -39,47 +39,57 @@ const MovieList = () => {
         fetchMovies(page);
     }, []);
 
-    const searchMovies = async (query) => {
-        if (!searchQuery.trim()) return;
-        setLoading(true);
-
-        try {
-            const apiKey = import.meta.env.VITE_APP_API_KEY;
-            const response = await fetch(
-                `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${encodeURIComponent(
-                    query
-                )}&page=1`
-            );
-            const data = await response.json();
-            setMovies(data.results);
-        } catch (error) {
-            console.error(error);
-            setMovies([]);
-        } finally {
-            setLoading(false);
-        }
-    };
     useEffect(() => {
         if (mode === "NowPlaying") {
             setPage(1);
             setHasMore(true);
             fetchMovies(1);
         } else if (searchQuery) {
-            searchMovies(searchQuery);
+            searchMovies(searchQuery,1);
         }
     }, [mode, searchQuery]);
+
+const searchMovies = async (query, pageNumber) => {
+    if (!query.trim()) return;
+    setLoading(true);
+    try {
+        const apiKey = import.meta.env.VITE_APP_API_KEY;
+        const response = await fetch(
+            `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&page=${pageNumber}&language=en-US&query=${encodeURIComponent(query)}`
+        );
+        if (!response.ok) {
+            throw new Error("Failed to fetch search results");
+        }
+        const data = await response.json();
+        setMovies(data.results);
+        setHasMore(pageNumber < data.total_pages);
+    } catch (err) {
+        console.error(err);
+        setMovies([]);
+        setError(err.message);
+    } finally {
+        setLoading(false);
+    }
+};
+
 
     const handleLoadMore = () => {
         const nextPage = page + 1;
         setPage(nextPage);
+        if (mode === "NowPlaying"){
         fetchMovies(nextPage);
+
+        }
+        else if (mode === "search"){
+        searchMovies(searchQuery,nextPage);
+        }
     };
 
     const handleSearch = (query) => {
         setSearchQuery(query);
         setMode("search");
         setMovies([]);
-        searchMovies(query);
+        searchMovies(query,page);
     };
 
    const handleCardClick = async (movieId) => {

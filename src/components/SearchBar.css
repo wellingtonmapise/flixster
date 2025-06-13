@@ -6,9 +6,18 @@
     
 }
 
+#search-bar:hover{
+     border-color: #c01d1d;
+}
+
 .search-btn{
   color: white;
   border:  0.1px solid white;
+  background-color: #000000;
+}
+
+.search-btn:hover{
+     border-color: #c01d1d;
 }
 
 #search-bar input{

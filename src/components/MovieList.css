@@ -85,4 +85,9 @@ margin-top: 20px;
 .clear-btn{  
   color: white;
   border:  0.1px solid white;
+  background-color: #000000;
+}
+
+.clear-btn:hover{
+     border-color: #c01d1d;
 }

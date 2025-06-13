@@ -1,5 +1,18 @@
-select{
-    padding: 0.5rem;
-    border-radius: 4px;
-    border: 1px solid #ccc;
+.sort-bar select{
+    padding: 8px 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #000000;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+.sort-bar section:hover{
+    border-color: #c01d1d;
+}
+
+.select-items {
+    background-color: black;
+    color:white;
 }

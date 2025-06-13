@@ -1,11 +1,15 @@
+import './MovieTrailer.css'
 const MovieTrailer = ({ movie }) => {
     const noMovieTrailerFound = () =>{
         return(
-            <>
-                <p className="animated-msg"><strong>No movie trailer found!</strong></p> 
-                <img  src='src/assets/placeholder.png'>
+            <div className='placeholder'>
+                <p className="animated-msg">No movie trailer found! </p> 
+                <img  src='src/assets/trailer.png' alt="Placeholder">
                 </img>
-            </>
+
+            </div>
+
+            
 
         )
 
