@@ -1,4 +1,3 @@
-
 /**
  * Retrieves a list of items from localStorage for the given key.
  * @param {string} key - The localStorage key to retrieve.
@@ -49,7 +48,7 @@ function isInList(key, id) {
 
 /**
  * Utility functions to manage the "favorites" list in localStorage.
- * 
+ *
  * Methods:
  * - get: Retrieve all favorited items.
  * - save: Add a new item to favorites (if it doesn't already exist).
@@ -66,7 +65,7 @@ export const favoritesUtils = {
 
 /**
  * Utility functions to manage the "watched" list in localStorage.
- * 
+ *
  * Methods:
  * - get: Retrieve all watched items.
  * - save: Add a new item to watched (if it doesn't already exist).
