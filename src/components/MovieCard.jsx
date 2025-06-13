@@ -1,7 +1,7 @@
-import './MovieCard.css';
-import { FaHeart, FaEye, FaEyeSlash } from 'react-icons/fa';
-import { useEffect, useState } from 'react';
-import { favoritesUtils, watchedUtils } from '../utils/utils';
+import "./MovieCard.css";
+import { FaHeart, FaEye, FaEyeSlash } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { favoritesUtils, watchedUtils } from "../utils/utils";
 
 const MovieCard = ({
   id,
@@ -12,7 +12,7 @@ const MovieCard = ({
   isFavorited = false,
   isWatched = false,
   onUnfavorite,
-  onUnwatch
+  onUnwatch,
 }) => {
   const [isFavorite, setIsFavorite] = useState(isFavorited);
   const [isSeen, setIsSeen] = useState(isWatched);
@@ -28,7 +28,12 @@ const MovieCard = ({
       favoritesUtils.remove(id);
       onUnfavorite?.();
     } else {
-      const movie = { id, title, poster_path: posterUrl, vote_average: voteAverage };
+      const movie = {
+        id,
+        title,
+        poster_path: posterUrl,
+        vote_average: voteAverage,
+      };
       favoritesUtils.save(movie);
     }
     setIsFavorite(!isFavorite);
@@ -40,7 +45,12 @@ const MovieCard = ({
       watchedUtils.remove(id);
       onUnwatch?.();
     } else {
-      const movie = { id, title, poster_path: posterUrl, vote_average: voteAverage };
+      const movie = {
+        id,
+        title,
+        poster_path: posterUrl,
+        vote_average: voteAverage,
+      };
       watchedUtils.save(movie);
     }
     setIsSeen(!isSeen);
@@ -49,7 +59,11 @@ const MovieCard = ({
   return (
     <div className="movie-card" onClick={onClick}>
       <img
-        src={posterUrl ? `https://image.tmdb.org/t/p/w500${posterUrl}` : 'src/assets/placeholder.png'}
+        src={
+          posterUrl
+            ? `https://image.tmdb.org/t/p/w500${posterUrl}`
+            : "src/assets/placeholder.png"
+        }
         alt={`${title} poster`}
       />
       <h3>{title}</h3>
@@ -60,7 +74,7 @@ const MovieCard = ({
           {isFavorite ? <FaHeart color="red" /> : <FaHeart />}
         </p>
         <p className="watch-eye" onClick={toggleWatched}>
-          {isSeen ? < FaEye/> : <FaEyeSlash />}
+          {isSeen ? <FaEye /> : <FaEyeSlash />}
         </p>
       </div>
     </div>
@@ -68,4 +82,3 @@ const MovieCard = ({
 };
 
 export default MovieCard;
-

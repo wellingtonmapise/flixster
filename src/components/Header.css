@@ -1,11 +1,11 @@
-h1{
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
 }
 
-.header{
-    display: flex;
-    align-items: center;
-    justify-content:center;
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

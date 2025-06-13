@@ -1,47 +1,41 @@
 .movie-card {
-    background-color: #000000;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    width: 230px;
-    margin-top: 2rem;
-    text-align: center;
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* flex-wrap: wrap; */
-    cursor: pointer;
+  background-color: #000000;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  width: 230px;
+  margin-top: 2rem;
+  text-align: center;
+  cursor: pointer;
 }
 
 .movie-card p,
 h3 {
-    color: white
+  color: white;
 }
 
 .movie-card img {
-    width: 100%;
-    border-radius: 5px;
-    /* height: 230px; */
-    height: 345px;
-
+  width: 100%;
+  border-radius: 5px;
+  height: 345px;
 }
 
 .movie-card:hover {
-    transform: scale(1.05) translateY(-5px);
-    transition: transform 0.2s ease-out;
-    border-color: white;
+  transform: scale(1.05) translateY(-5px);
+  transition: transform 0.2s ease-out;
+  border-color: white;
 }
 
-.toggle-like{
-    cursor: pointer;
+.toggle-like {
+  cursor: pointer;
 }
-.watch-eye{
-    cursor: pointer;
+.watch-eye {
+  cursor: pointer;
 }
 
-
-.toggle-icons{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+.toggle-icons {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
 }

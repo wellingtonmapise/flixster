@@ -17,7 +17,7 @@ Deployed Application (**required**):[Flixster Deployed Site](https://flixster-fi
     - [x] Title
     - [x] Poster image
     - [x] Vote average
-  - [x] Users can load more current movies by clicking a button which adds more movies to the grid without reloading the entire page. 
+  - [x] Users can load more current movies by clicking a button which adds more movies to the grid without reloading the entire page.
 - [ ] **Search Functionality**
   - [x] Users can use a search bar to search for movies by title.
   - [x] The search bar should include:
@@ -33,7 +33,7 @@ Deployed Application (**required**):[Flixster Deployed Site](https://flixster-fi
   - [x] Website implements all of the following accessibility features:
     - [x] Semantic HTML
     - [x] [Color contrast](https://webaim.org/resources/contrastchecker/)
-    - [x] Alt text for images 
+    - [x] Alt text for images
   - [x] Website implements responsive web design.
     - [x] Uses CSS Flexbox or CSS Grid
     - [x] Movie tiles and images shrink/grow in response to window size
@@ -59,13 +59,12 @@ Deployed Application (**required**):[Flixster Deployed Site](https://flixster-fi
     - [x] Search bar
     - [x] Movie grid
     - [x] Footer section
-    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it. 
+    - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: To ease the grading process, please use the [color contrast checker](https://webaim.org/resources/contrastchecker/) to demonstrate to the grading team that text and background colors on your website have appropriate contrast. The Contrast Ratio should be above 4.5:1 and should have a green box surrounding it.
   - [x] **Deployment**
   - [x] Website is deployed via Render.
-  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough. 
+  - [ ] **VIDEO WALKTHROUGH SPECIAL INSTRUCTIONS**: For ease of grading, please use the deployed version of your website when creating your walkthrough.
 
 #### STRETCH FEATURES
-
 
 - [x] **Embedded Movie Trailers**
   - [x] Within the pop-up modal displaying a movie's details, the movie trailer is viewable.
@@ -77,8 +76,8 @@ Deployed Application (**required**):[Flixster Deployed Site](https://flixster-fi
     - [x] Clicking on the visual element should mark the movie as favorited
     - [x] There should be visual feedback (such as the heart turning a different color) to show that the movie has been favorited by the user.
   - [x] If the movie is already favorited:
-    - [x] Clicking on the visual element should mark the movie as *not* favorited.
-    - [x] There should be visual feedback (such as the heart turning a different color) to show that the movie has been unfavorited. 
+    - [x] Clicking on the visual element should mark the movie as _not_ favorited.
+    - [x] There should be visual feedback (such as the heart turning a different color) to show that the movie has been unfavorited.
 - [x] **Watched Checkbox**
   - [x] For each movie displayed, users can mark the movie as watched.
   - [x] There should be visual element (such as an eye icon) on each movie's tile to show whether or not the movie has been watched.
@@ -86,7 +85,7 @@ Deployed Application (**required**):[Flixster Deployed Site](https://flixster-fi
     - [x] Clicking on the visual element should mark the movie as watched
     - [x] There should be visual feedback (such as the eye turning a different color) to show that the movie has been watched by the user.
   - [x] If the movie is already watched:
-    - [x] Clicking on the visual element should mark the movie as *not* watched.
+    - [x] Clicking on the visual element should mark the movie as _not_ watched.
     - [x] There should be visual feedback (such as the eye turning a different color) to show that the movie has not been watched.
 - [x] **Sidebar**
   - [x] The website includes a side navigation bar.
@@ -106,15 +105,15 @@ Deployed Application (**required**):[Flixster Deployed Site](https://flixster-fi
 
 ### Reflection
 
-* Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
+- Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
 Add your response here
 
-* If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
-  
+- If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
+
 Add your response here
 
-* Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
+- Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
 Add your response here
 
@@ -126,4 +125,3 @@ Add your response here
 
 Give a shout out to somebody from your cohort that especially helped you during your project. This can be a fellow peer, instructor, TA, mentor, etc.
 Shoutout to all the tech fellows, the instructors and cohort 2!
-

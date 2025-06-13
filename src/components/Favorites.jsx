@@ -1,8 +1,8 @@
-import { useEffect, useState } from 'react';
-import MovieCard from './MovieCard';
-import { favoritesUtils} from '../utils/utils';
-import MovieModal from './MovieModal';
-import './Favorite.css'
+import { useEffect, useState } from "react";
+import MovieCard from "./MovieCard";
+import { favoritesUtils } from "../utils/utils";
+import MovieModal from "./MovieModal";
+import "./Favorite.css";
 
 function Favorites() {
   const [favorites, setFavorites] = useState([]);
@@ -13,42 +13,37 @@ function Favorites() {
   }, []);
 
   const handleUnfavorite = (id) => {
-    favoritesUtils.remove(id); 
+    favoritesUtils.remove(id);
     const updated = favorites.filter((movie) => movie.id !== id);
     setFavorites(updated);
   };
 
   return (
     <div>
-    <div className='header-top'>
+      <div className="header-top">
         <h1> Favorites</h1>
-    </div>
-     <div className="movie-list">
-      {favorites.length === 0 ? (
-        <p>No favorites yet.</p>
-      ) : (
-        favorites.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            id={movie.id}
-            title={movie.title}
-            posterUrl={movie.poster_path}
-            voteAverage={movie.vote_average}
-            isFavorited={true} 
-            onUnfavorite={() => handleUnfavorite(movie.id)} 
-            onClick={() => setClickedCard(movie)}
-          />
-        ))
+      </div>
+      <div className="movie-list">
+        {favorites.length === 0 ? (
+          <p>No favorites yet.</p>
+        ) : (
+          favorites.map((movie) => (
+            <MovieCard
+              key={movie.id}
+              id={movie.id}
+              title={movie.title}
+              posterUrl={movie.poster_path}
+              voteAverage={movie.vote_average}
+              isFavorited={true}
+              onUnfavorite={() => handleUnfavorite(movie.id)}
+              onClick={() => setClickedCard(movie)}
+            />
+          ))
+        )}
+      </div>
+      {clickedCard && (
+        <MovieModal movie={clickedCard} onClose={() => setClickedCard(null)} />
       )}
-    </div>
-                {clickedCard && (
-                <MovieModal
-                    movie={clickedCard}
-                    onClose={() => setClickedCard(null)}
-                />
-            )}
-
-
     </div>
   );
 }

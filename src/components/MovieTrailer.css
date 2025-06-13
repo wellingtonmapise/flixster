@@ -1,5 +1,9 @@
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -14,7 +18,7 @@
   font-size: 1.8em;
   color: white;
 }
-.placeholder img{
-    width:500px;
-    height:231px;
+.placeholder img {
+  width: 500px;
+  height: 231px;
 }

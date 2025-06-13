@@ -1,71 +1,67 @@
-.movie-list{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
+.movie-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
-h2{
-   color: aliceblue;
-   font-weight: bold;
-   font-size: 2rem;
+h2 {
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 2rem;
 }
 
-
-.nav{
-    display: flex;
-    background-color: #000000;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1rem 2rem;
-    justify-content: space-between;
-    color:white;
-    gap: 1rem;
-
+.nav {
+  display: flex;
+  background-color: #000000;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 1rem 2rem;
+  justify-content: space-between;
+  color: white;
+  gap: 1rem;
 }
 
-.nav-bottom{
-    display: flex;
-    justify-content: space-even;
-    gap: 1rem;
-    width: 100%;
-    max-width: 900px;
-    flex-wrap: wrap;
+.nav-bottom {
+  display: flex;
+  justify-content: space-even;
+  gap: 1rem;
+  width: 100%;
+  max-width: 900px;
+  flex-wrap: wrap;
 }
 
-.header-section{
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    color: white;
-    background-color: #000000;
+.header-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background-color: #000000;
 }
 
-
-.search-section{
-    display: flex;
-    flex: 1;
+.search-section {
+  display: flex;
+  flex: 1;
 }
-.search-section input{
-    flex: 1;
-    padding: 0.5rem;
-    border: 4px;
-    border: 1px solid #ccc;
-}
-
-.search-section button{
-    color:white;
-    padding: 0.5rem 1rem;
-
+.search-section input {
+  flex: 1;
+  padding: 0.5rem;
+  border: 4px;
+  border: 1px solid #ccc;
 }
 
-button:hover{
-    background-color: #666;
+.search-section button {
+  color: white;
+  padding: 0.5rem 1rem;
 }
 
-.load-more-btn{
-margin-top: 20px;
+button:hover {
+  background-color: #666;
+}
+
+.load-more-btn {
+  margin-top: 20px;
   padding: 10px 20px;
   background-color: #000306;
   color: white;
@@ -74,20 +70,18 @@ margin-top: 20px;
   cursor: pointer;
 }
 
-.main-section{
-    color:white;
-    background-color: #0e0f10;
-    /* width:900px;  */
-    max-width: 100%;
+.main-section {
+  color: white;
+  background-color: #0e0f10;
+  max-width: 100%;
 }
 
-
-.clear-btn{  
+.clear-btn {
   color: white;
-  border:  0.1px solid white;
+  border: 0.1px solid white;
   background-color: #000000;
 }
 
-.clear-btn:hover{
-     border-color: #c01d1d;
+.clear-btn:hover {
+  border-color: #c01d1d;
 }
