@@ -1,11 +1,11 @@
 import { useState } from "react";
 import "./App.css";
-import MovieList from "./MovieList";
-import Footer from "./Footer";
-import SideBar from "./SideBar";
+import MovieList from "./components/MovieList";
+import Footer from "./components/Footer";
+import SideBar from "./components/SideBar";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Favorites from "./Favorites";
-import Watched from "./Watched";
+import Favorites from "./components/Favorites";
+import Watched from "./components/Watched";
 
 const App = () => {
   return (

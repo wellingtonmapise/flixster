@@ -1,12 +1,10 @@
 import { useEffect, useState } from "react";
 import MovieCard from "./MovieCard";
 import { favoritesUtils } from "../utils/utils";
-import MovieModal from "./MovieModal";
 import "./Favorite.css";
 
 function Favorites() {
   const [favorites, setFavorites] = useState([]);
-  const [clickedCard, setClickedCard] = useState([]);
 
   useEffect(() => {
     setFavorites(favoritesUtils.get());
@@ -36,14 +34,10 @@ function Favorites() {
               voteAverage={movie.vote_average}
               isFavorited={true}
               onUnfavorite={() => handleUnfavorite(movie.id)}
-              onClick={() => setClickedCard(movie)}
             />
           ))
         )}
       </div>
-      {clickedCard && (
-        <MovieModal movie={clickedCard} onClose={() => setClickedCard(null)} />
-      )}
     </div>
   );
 }
