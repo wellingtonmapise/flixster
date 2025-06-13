@@ -107,15 +107,15 @@ https://www.loom.com/share/62986bd9a9f542cab104fc5fc675c8d2?sid=f7559b3c-5a37-4a
 
 - Did the topics discussed in your labs prepare you to complete the assignment? Be specific, which features in your weekly assignment did you feel unprepared to complete?
 
-Add your response here
+Yes, the topics covered in the labs were instrumental in preparing me for the assignment. The project essentially integrated the concepts and skills we practiced in the labs into a single component, which was incredibly helpful.
 
 - If you had more time, what would you have done differently? Would you have added additional features? Changed the way your project responded to a particular event, etc.
 
-Add your response here
+If I had more time, I would have focused on enhancing the CSS styling to improve the overall aesthetics of the project. Additionally, I would have implemented more user feedback mechanisms, such as notifications or visual cues, to acknowledge actions like marking a movie as watched or favorited. This would enhance the user experience by providing immediate feedback.
 
 - Reflect on your project demo, what went well? Were there things that maybe didn't go as planned? Did you notice something that your peer did that you would like to try next time?
 
-Add your response here
+The project demo went well overall, but listening to others' demos was particularly enlightening. It helped me identify some bugs in my own project that I hadn't noticed before. Observing my peers' presentations also gave me new ideas, such as using animations when waiting for an API response, which I would like to try in future projects.
 
 ### Open-source libraries used
 
