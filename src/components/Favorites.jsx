@@ -17,24 +17,26 @@ function Favorites() {
   };
 
   return (
-    <div>
-      <div className="header-top">
-        <h1> Favorites</h1>
+    <div className="list-page">
+      <div className="page-header">
+        <h1>Favorites</h1>
+        <p>Your saved picks, ready to rewatch.</p>
       </div>
-      <div className="movie-list">
+      <div className="movie-grid">
         {favorites.length === 0 ? (
-          <p>No favorites yet.</p>
+          <p className="status-msg">No favorites yet.</p>
         ) : (
           favorites.map((movie) => (
-            <MovieCard
-              key={movie.id}
-              id={movie.id}
-              title={movie.title}
-              posterUrl={movie.poster_path}
-              voteAverage={movie.vote_average}
-              isFavorited={true}
-              onUnfavorite={() => handleUnfavorite(movie.id)}
-            />
+              <MovieCard
+                key={movie.id}
+                id={movie.id}
+                title={movie.title}
+                posterUrl={movie.poster_path}
+                backdropUrl={movie.backdrop_path}
+                voteAverage={movie.vote_average}
+                isFavorited={true}
+                onUnfavorite={() => handleUnfavorite(movie.id)}
+              />
           ))
         )}
       </div>

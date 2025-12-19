@@ -5,36 +5,52 @@ const MovieModal = ({ movie, onClose }) => {
   return (
     <div className="modal-overlay" onClick={onClose}>
       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <h2>{movie.title}</h2>
+        <div className="modal-header">
+          <h2 className="modal-title">{movie.title}</h2>
+          <button
+            type="button"
+            className="close-btn"
+            onClick={onClose}
+            aria-label="Close"
+          >
+            Close
+          </button>
+        </div>
         <img
+          className="modal-backdrop"
           src={
             movie.backdrop_path
-              ? `https://image.tmdb.org/t/p/w500${movie.backdrop_path}`
-              : `src/assets/placeholder.png`
+              ? `https://image.tmdb.org/t/p/w780${movie.backdrop_path}`
+              : "src/assets/placeholder.png"
           }
           alt={movie.title}
         />
-        <p>Runtime: {movie.runtime} minutes</p>
-        <p>
-          <strong>Realease Date: </strong>
-          {movie.release_date}
-        </p>
-        <p>
-          <strong>Overview : </strong>
-          {movie.overview}
-        </p>
-        <p>
-          <strong>Genres : </strong>
-          {movie.genres?.map((g) => g.name).join(",")}
-        </p>
-        <p>
-          <strong>Rating: </strong>
-          {movie.vote_average}
-        </p>
+        <div className="modal-details">
+          <p className="modal-overview">{movie.overview}</p>
+          <div className="modal-meta">
+            <div>
+              <span className="meta-label">Runtime</span>
+              <span className="meta-value">{movie.runtime} min</span>
+            </div>
+            <div>
+              <span className="meta-label">Release Date</span>
+              <span className="meta-value">{movie.release_date}</span>
+            </div>
+            <div>
+              <span className="meta-label">Genres</span>
+              <span className="meta-value">
+                {movie.genres?.map((g) => g.name).join(", ")}
+              </span>
+            </div>
+            <div>
+              <span className="meta-label">Rating</span>
+              <span className="meta-value">
+                {movie.vote_average?.toFixed(1)}
+              </span>
+            </div>
+          </div>
+        </div>
         <MovieTrailer movie={movie} />
-        <button id="close-btn" onClick={onClose}>
-          Close
-        </button>
       </div>
     </div>
   );

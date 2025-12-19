@@ -1,13 +1,17 @@
 import "./Sort.css";
 
-const Sort = ({ onSort }) => {
+const Sort = ({ onSort, value }) => {
   const handleSortChange = (event) => {
     onSort(event.target.value);
   };
 
   return (
     <div className="sort-bar">
-      <select onChange={handleSortChange}>
+      <select
+        onChange={handleSortChange}
+        value={value}
+        aria-label="Sort movies"
+      >
         <option value=""> Sort By</option>
         <option value="title"> Title</option>
         <option value="release_date"> Release Date</option>

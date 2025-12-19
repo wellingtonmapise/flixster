@@ -16,13 +16,14 @@ function Watched() {
   };
 
   return (
-    <div>
-      <div className="header-top">
-        <h1> Watched Movies</h1>
+    <div className="list-page">
+      <div className="page-header">
+        <h1>Watched</h1>
+        <p>Your watch history in one place.</p>
       </div>
-      <div className="movie-list">
+      <div className="movie-grid">
         {watched.length === 0 ? (
-          <p>You haven't watched anything yet.</p>
+          <p className="status-msg">You haven't watched anything yet.</p>
         ) : (
           watched.map((movie) => (
             <MovieCard
@@ -30,6 +31,7 @@ function Watched() {
               id={movie.id}
               title={movie.title}
               posterUrl={movie.poster_path}
+              backdropUrl={movie.backdrop_path}
               voteAverage={movie.vote_average}
               isWatched={true}
               onUnwatch={() => handleUnSeen(movie.id)}

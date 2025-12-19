@@ -1,14 +1,14 @@
-.footer p {
-  margin: 20px;
-  padding: 20px;
-  color: white;
+.footer {
+  background: #0b0b0b;
+  width: 100%;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 1.5rem 2.5rem;
+  text-align: center;
 }
 
-.footer {
-  background: #010307;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  color: white;
-  text-align: center;
+.footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.04rem;
 }

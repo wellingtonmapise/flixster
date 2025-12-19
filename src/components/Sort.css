@@ -1,18 +1,14 @@
 .sort-bar select {
-  padding: 8px 12px;
-  font-size: 16px;
-  color: white;
-  background-color: #000000;
+  padding: 0.55rem 1rem;
+  font-size: 0.9rem;
+  color: var(--text);
+  background: rgba(20, 20, 20, 0.7);
   cursor: pointer;
-  border-radius: 5px;
-  border: 1px solid white;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.sort-bar section:hover {
-  border-color: #c01d1d;
-}
-
-.select-items {
-  background-color: black;
-  color: white;
+.sort-bar select:focus {
+  outline: none;
+  border-color: var(--accent);
 }

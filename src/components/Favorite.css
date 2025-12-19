@@ -1,15 +1,26 @@
-.header-top {
+.list-page {
+  padding: 2.5rem;
+}
+
+.page-header {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
 }
 
-.header-top h1 {
-  text-align: center;
-  color: white;
-  font-size: 50px;
+.page-header h1 {
+  margin: 0;
+  font-size: 2.4rem;
 }
 
-p {
-  color: white;
+.page-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+@media (max-width: 768px) {
+  .list-page {
+    padding: 1.8rem 1.5rem;
+  }
 }
